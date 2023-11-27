@@ -1,0 +1,42 @@
+<h1>ngif padhne ja rhe hain</h1>
+<!-- ngif ko use karne ka syntax - <h1 *ngif="show">ngif pr hi ho tum</h1>
+
+-->
+<div *ngIf="varshahogi; then ifblock; else elseblock"></div>
+
+<ng-template #ifblock>
+  <h1>bhaiya fasal achhi hogi</h1>
+</ng-template>
+
+<ng-template #elseblock>
+  <h1>bhaiya fasal kharab hogi</h1>
+</ng-template>
+
+<!--<div *ngIf="varshahogi">
+<h1> fasal achhi hogi</h1>
+</div>
+-->
+
+<h1>if-else padhenge</h1>
+
+<ng-template [ngIf]="show == 'red'">
+  <h3>red cloth hai</h3>
+</ng-template>
+
+<ng-template [ngIf]="show == 'blue'">
+  <h3>blue cloth hai</h3>
+</ng-template>
+
+<ng-template [ngIf]="show == 'yellow'">
+  <h3>cloth yellow color ka hai</h3>
+</ng-template>
+
+<ng-template [ngIf]="show == 'black'">
+  <h3>kala kapda hai</h3>
+</ng-template>
+
+<h1>Ngfor padhenge</h1>
+<h1>details of students are :</h1>
+<h3 *ngFor="let item of student">
+  {{ item.name }}<br>{{ item.mob }}--{{ item.class }}--{{ item.email}}
+</h3>
